@@ -34,7 +34,7 @@ def predict(out_activation):
 
 if __name__ == '__main__':
     net = loading("model.json")
-    x = load_image("zero.png")
+    x = load_image("seven.jpg")
     output_activations = calculate_output(x)
     prediction = predict(output_activations)
     print(prediction)
