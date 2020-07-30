@@ -4,9 +4,8 @@ import json
 import sys
 import QuadraticCost
 import CrossEntropyCost
-# Network initialization code assumes that the
-# first layer of neurons is an input layer, and omits to set any biases for those neurons, since
-# biases are only ever used in computing the outputs from later layers.
+
+
 class Network(object):
     def __init__(self,sizes,cost = CrossEntropyCost.CrossEntropyCost):
             self.num_layers = len(sizes)
@@ -120,7 +119,7 @@ class Network(object):
         f.close()
 
     def cost_derivative(output_activation,y):
-        return (output_activation-y)#return the partial derivation for the cost function(refer notes)
+        return (output_activation-y)
 
     def sigmoid_prime(self,z):
         return self.sigmoid(z)*(1-self.sigmoid(z))
